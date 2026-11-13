@@ -5,7 +5,7 @@ import "./Footer.css";
 function Footer(){
     return(
         <div>
-            <h6>This is my Footer</h6>
+            <h6>2026 My Online Server. All rights reserved</h6>
         </div>
     )
 }
