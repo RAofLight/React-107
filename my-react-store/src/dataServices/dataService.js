@@ -28,6 +28,20 @@ const catalog = [
         "price":"35",
         "image":"Moldavite.jpg",
         "_id": "4"
+    },
+    {
+        "title":"Moonstone",
+        "category":"Crystals",
+        "price":"22",
+        "image":"Moonstone.jpg",
+        "_id": "5"
+    },
+    {
+        "title":"Obsidian",
+        "category":"Crystals",
+        "price":"36",
+        "image":"Obsidian.jpg",
+        "_id": "6"
     }
 ];
 
