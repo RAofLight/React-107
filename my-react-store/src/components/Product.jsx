@@ -14,14 +14,19 @@ function Product(props){
         console.log(quantity);
         setQty(quantity);
     }
+
+    function handleAdd(){
+        props.onAdd({...props.data, quantity: qty});
+    }
     // Calculate the total price using the data from the Quanity Picker
     return(
-        <div className="prodcut">
+        <div className="product">
             <img src={"/images/" + props.data.image}></img>
             <h5>{props.data.title}</h5>
             <label>${props.data.price}</label>
-            <label>${calculateTotal()}</label>
+            <label>Total: {calculateTotal()}</label>
             <QuantityPicker onChange = {handleQtyChange}/>
+            <button onClick = {handleAdd}>Add</button>
         </div>
     );
 }

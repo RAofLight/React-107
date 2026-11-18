@@ -25,7 +25,7 @@ const catalog = [
     {
         "title":"Moldavite",
         "category":"Crystals",
-        "price":"35",
+        "price":"36",
         "image":"Moldavite.jpg",
         "_id": "4"
     },
@@ -39,7 +39,7 @@ const catalog = [
     {
         "title":"Obsidian",
         "category":"Crystals",
-        "price":"36",
+        "price":"35",
         "image":"Obsidian.jpg",
         "_id": "6"
     }
