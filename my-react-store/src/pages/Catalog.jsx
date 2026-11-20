@@ -1,7 +1,7 @@
 import "./Catalog.css";
 import Product from "../components/Product";
 import { useEffect, useState } from "react";
-import DataService from "../dataServices/dataService";
+import DataService from "../Services/dataService";
 
 function Catalog(){
     const [products, setProducts] = useState([]);
