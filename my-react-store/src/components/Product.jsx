@@ -20,13 +20,13 @@ function Product(props){
     }
     // Calculate the total price using the data from the Quanity Picker
     return(
-        <div className="product">
-            <img src={"/images/" + props.data.image}></img>
+        <div className=" card product">
+            <img src={"/images/" + props.data.image} className= "card-img-top" alt={props.data.title}></img>
             <h5>{props.data.title}</h5>
-            <label>${props.data.price}</label>
-            <label>Total: {calculateTotal()}</label>
+            <label className="text-secondary">Price: ${props.data.price.toFixed(2)}</label>
+            <label className="fw-bold">Total: ${calculateTotal()}</label>
             <QuantityPicker onChange = {handleQtyChange}/>
-            <button onClick = {handleAdd}>Add</button>
+            <button className= "btn btn-dark w-100 mt-3" onClick = {handleAdd}>Add to cart</button>
         </div>
     );
 }

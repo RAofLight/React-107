@@ -6,13 +6,24 @@ import DataService from "../Services/dataService";
 function Catalog(){
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [categories, setCategories] = useState([]);
+    const [prodsToDisplay, setProdsToDisplay] = useSate([]);
+    
     
     useEffect(()=>{
-        // Load the data from the dataService
+       loadCatalog();
+    }, []);
+
+    function loadCatalog(){
         let service = new DataService();
         let data = service.getProducts();
+
         setProducts(data);
-    },[]); // The empty array means that this runs only once
+        setProdsToDisplay(data);
+
+        let cats = [];
+        setCategories(cats);
+    }
 
     function handleAddToCart(item){
         setCart([...cart, item]); // spread Operator to populate the stateVariable array
@@ -22,11 +33,14 @@ function Catalog(){
 
     return(
         <div className="catalog">
-            <p>Cart: {cart.length}</p>
-            {products.map(prod => <Product key = {prod._id} data = {prod} onAdd = {handleAddToCart}/>)}
+          <h1>Catalog</h1>
+          <p className= "text-secondary">Cart: {cart.length}</p>
+          {prodsToDisplay.map(prod => <Product key = {prod._id} data = {prod} onAdd = {handleAddToCart}/>)}
                      {/* for(i=0; i<products; i++)
                                let prod = products[i] */}
         </div>
+
+    
     );
 }
 
