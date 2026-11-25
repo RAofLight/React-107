@@ -42,7 +42,30 @@ const catalog = [
         "price":35,
         "image":"Obsidian.jpg",
         "_id": "6"
-    }
+    },
+    {
+        "title":"Dragon's Blood",
+        "category":"Insense",
+        "price":20,
+        "image":"Dragon's Blood.jpg",
+        "_id": "7"
+    },
+    {
+        "title":"Palo Santo",
+        "category":"Insense",
+        "price":17,
+        "image":"Palo Santo.jpg",
+        "_id": "8"
+    },
+    {
+        "title":"Sage",
+        "category":"Insense",
+        "price":18,
+        "image":"Sage.jpg",
+        "_id": "9"
+    },
+    
+    
 ];
 
 class DataService{

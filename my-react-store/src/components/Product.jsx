@@ -3,7 +3,7 @@ import QuantityPicker from "./QuantityPicker";
 import {useState} from "react";
 
 function Product(props){
-    const [ qty, setQty] = useState(1);
+    const [qty, setQty] = useState(1);
 
     function calculateTotal(){
         let total = props.data.price * qty;
